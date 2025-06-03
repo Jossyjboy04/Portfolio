@@ -1,6 +1,6 @@
 html{scroll-behavior: smooth;}
 :root{
-  --bodybg:rgba(255,255,120,0.1);
+  --bodybg:rgba(255,255,255,1);
   --bgcolor:linear-gradient(to left,dodgerblue,purple);
   --primarycolor:dodgerblue;
   --secondarycolor:orangered;
@@ -67,12 +67,13 @@ details[open] summary::after{
   background:var(--bodybg);
   position:absolute;
   transform:translate(-100%);
+  z-index:9999;
 }
 .nav-link{
   text-decoration: none;
   display:block;
   padding:12px;
-  color: gray;
+  color: black;
 }
 .nav-link:hover{
   color:var(--primarycolor);
@@ -93,7 +94,7 @@ details[open] summary::after{
   filter:blur(1px);
 }
 .para{
-  color:grey;
+  color:rgba(0,0,0,1);
   line-height:20px;
   font-size:14px;
   font-weight:400;
@@ -160,7 +161,7 @@ details[open] summary::after{
   text-align:center;
   text-decoration:none;
   transform:translateX(50%);
-  color:gray;
+  color:black;
   font-size:24px;
   animation:bounce 3s infinite ease;
 }
@@ -237,7 +238,7 @@ main{
   background-color:rgba(255,255,70,0.1);
 }
 .para3{
-  color:grey;
+  color:black;
   font-size:22px;
   font-weight:300;
   text-align:center;
@@ -480,7 +481,7 @@ footer{
   }
   #footer{
     text-align: center ;
-    color:gray;
+    color:black;
     font-size:16px;
     font-weight:200;
   }
@@ -517,7 +518,7 @@ footer{
     }
     .nav-link-respond{
       text-decoration:none;
-      color:gray;
+      color:black;
     }
     .nav-link-respond:hover{
       color:dodgerblue;
@@ -586,7 +587,7 @@ footer{
     }
     .nav-link-respond{
       text-decoration:none;
-      color:gray;
+      color:black;
     }
     .nav-link-respond:hover{
       color:dodgerblue;
