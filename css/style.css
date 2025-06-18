@@ -409,6 +409,9 @@ em{
   justify-content: center;
   align-items:center;
 }
+.r1{
+  padding-right:24%;
+}
 input{
   display:block;
 }
@@ -425,7 +428,7 @@ input:not(input[type="submit"]):focus{
 }
 textarea{
   display:block;
-  padding:20px;
+  padding:10px;
   border:none;
   outline:none;
   border-radius:10px;
@@ -503,7 +506,9 @@ footer{
     }
   }
   @media (min-width:640px) and (max-width:1199px){
-    
+    .r1{
+      padding-right:17%;
+    }
     .remove{
       display:grid;
       grid-template-columns: repeat(2,1fr);
@@ -585,6 +590,9 @@ footer{
       display:flex;
       gap:30px;
     }
+    .r1{
+      padding-right:8%;
+    }
     .nav-link-respond{
       text-decoration:none;
       color:black;
@@ -593,3 +601,82 @@ footer{
       color:dodgerblue;
     }
   }
+
+ 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bodybg: rgba(0, 0, 0, 1);
+    --bgcolor: linear-gradient(to left, dodgerblue, purple);
+    --primarycolor: dodgerblue;
+    --secondarycolor: orangered;
+    --supportcolor: white;
+  }
+
+  body {
+    background-color: var(--bodybg);
+    color: var(--supportcolor);
+  }
+
+  #navbar {
+    background: #111;
+  }
+
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: var(--primarycolor);
+  }
+.section1-div,.section3-div{
+  background:black;
+}
+  #black-h2,
+  .para,
+  .para2,
+  .para3 {
+    color: white;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .white-container {
+    background: #222;
+  }
+
+  .social {
+    background: #333;
+    color: white;
+  }
+
+  .image-code {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .demo {
+    background: var(--primarycolor);
+    border: solid white;
+  }
+
+  .form-div {
+    background: #111;
+  }
+
+  input:not(input[type="submit"]),
+  textarea {
+    background: #222;
+    color: white;
+  }
+
+  input:not(input[type="submit"]):focus,
+  textarea:focus {
+    border: 2px solid white;
+  }
+
+  footer #footer {
+    color: white;
+  }
+}
