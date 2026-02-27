@@ -1,16 +1,16 @@
 
 import { useState, useEffect } from 'react';
 import './App.css';
-
+import image from '/joseph.jpg'
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  // const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
-      setDarkMode(true);
+      // setDarkMode(true);
     }
   }, []);
 
@@ -35,7 +35,9 @@ function App() {
     { name: 'Responsive Design', level: 75 },
     { name: 'Tailwind CSS', level: 70 },
     { name: 'Web Accessibility', level: 65 },
-    { name: 'Git & Version Control', level: 50 }
+    { name: 'Git & Version Control', level: 50 },
+    { name: 'JavaScript', level: 50 },
+    { name: 'React', level: 30 }
   ];
 
   const projects = [
@@ -45,7 +47,7 @@ function App() {
       tags: ['HTML5', 'CSS3', 'Grid', 'Flexbox'],
       github: 'https://github.com/jossyjboy04',
       demo: '#',
-      image: '/images/coding.jpeg'
+      image: './coding.jpeg'
     },
     {
       title: 'CGPA predictor',
@@ -53,7 +55,7 @@ function App() {
       tags: ['HTML5', 'CSS3', 'Javascript', 'Flexbox'],
       github: 'https://github.com/jossyjboy04',
       demo: 'http://cgpaprediction.vercel.app/',
-      image: '/images/coding2.jpeg'
+      image: './coding2.jpeg'
     },
     {
       title: 'Website Clone',
@@ -61,7 +63,7 @@ function App() {
       tags: ['HTML5', 'CSS3', 'Grid', 'Flexbox'],
       github: 'https://github.com/jossyjboy04',
       demo: 'http://replication-neon.vercel.app',
-      image: '/images/coding3.jpeg'
+      image: './coding3.jpeg'
     },
     {
       title: 'GPA Calculator',
@@ -69,7 +71,7 @@ function App() {
       tags: ['HTML5', 'CSS3', 'Responsive', 'JavaScript'],
       github: 'https://github.com/jossyjboy04',
       demo: 'http://gpcalc-amber.vercel.app',
-      image: '/images/coding4.jpeg'
+      image: './coding4.jpeg'
     }
   ];
 
@@ -127,9 +129,16 @@ function App() {
             <a href="mailto:olorijoseph2002@gmail.com" className="social-icon">
               <i className="fa fa-envelope"></i>
             </a>
+            <a href="https://wa.me/07038640142?text=Hi%20Joseph,%20my%20name%20is%20_____.%20I%20found%20you%20through%20your%20website%20and%20I’m%20interested%20in%20your%20service" class="social-icon">
+            <i className="fab fa-whatsapp"></i> 
+        </a>
           </div>
 
           <a href="#about" className="scroll-indicator">⬇️</a>
+        </div>
+        <div>
+          <img src={image} alt='joseph picture' className="image"/>
+          
         </div>
       </section>
 

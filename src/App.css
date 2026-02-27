@@ -177,8 +177,10 @@ html {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+ flex-direction: row-reverse;
   justify-content: center;
+  gap:30px;
+  margin-left:100px;
   padding: 6rem 2rem 2rem;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   position: relative;
@@ -189,7 +191,11 @@ html {
   text-align: center;
   animation: fadeInUp 1s ease;
 }
-
+.image{
+  width:400px;
+  height:400px;
+  object-fit: cover;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -259,7 +265,8 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-secondary);
+  background-color:white;
+  color:var(--accent-primary);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px var(--shadow-hover);
 }
@@ -768,8 +775,13 @@ details{
 
   .hero {
     padding: 5rem 1.5rem 2rem;
+    display: flex;
+ flex-direction: column-reverse;
+ margin-left:0;
   }
-  
+ .image{
+  width:100%;
+ }
   .section {
     padding: 3rem 1.5rem;
   }
@@ -807,6 +819,11 @@ details{
 @media (min-width: 769px) and (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero {
+
+ margin-left:0;
   }
 }
 
